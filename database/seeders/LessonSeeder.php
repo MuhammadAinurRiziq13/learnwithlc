@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use App\Models\Lesson;
 use App\Models\LessonChapter;
 use App\Models\LessonSubChapter;
+use App\Models\Testimonial;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -23,6 +25,15 @@ class LessonSeeder extends Seeder
                     'lesson_chapter_id' => $lesson_chapter->id
                 ]);
             });
+
+            $reviewers = User::inRandomOrder()->limit(3)->get();
+
+            foreach ($reviewers as $reviewer) {
+                Testimonial::factory()->create([
+                    'user_id' => $reviewer->id,
+                    'lesson_id' => $lesson->id,
+                ]);
+            }
         });
     }
 }

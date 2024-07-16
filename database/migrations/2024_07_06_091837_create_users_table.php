@@ -20,7 +20,9 @@ return new class extends Migration
             $table->string('email', 100)->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->char('phone_number', 20)->unique()->nullable();
-            $table->text('password');
+            $table->text('password')->nullable();
+            $table->text('photo')->nullable();
+            $table->rememberToken();
             $table->timestamps();
 
             $table->foreign('level_id')->references('id')->on('levels')

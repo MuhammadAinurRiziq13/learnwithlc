@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\DB;
 
 class Lesson extends Model
 {
@@ -46,5 +48,17 @@ class Lesson extends Model
     public function chapters(): HasMany
     {
         return $this->hasMany(LessonChapter::class, 'lesson_id', 'id');
+    }
+
+    public function testimonials(): HasMany
+    {
+        return $this->hasMany(Testimonial::class, 'lesson_id', 'id');
+    }
+
+    public function popular()
+    {
+        return $this->orderByDesc('amount_registered_user')
+            ->limit(6)
+            ->get();
     }
 }

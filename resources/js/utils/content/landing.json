@@ -1,0 +1,57 @@
+{
+    "footer": {
+        "about": "Lembaga bimbingan belajar yang berdedikasi untuk membantu siswa mencapai impian akademis dan karier mereka. Dengan metode pembelajaran yang inovatif dan tutor yang berpengalaman, kami menyediakan lingkungan belajar yang mendukung dan interaktif",
+        "popularCourses": [
+            {
+                "courseName": "Matematika Dasar",
+                "redirectTo": ""
+            },
+            {
+                "courseName": "Fisika Dasar",
+                "redirectTo": ""
+            },
+            {
+                "courseName": "Bahasa Inggris Dasar",
+                "redirectTo": ""
+            },
+            {
+                "courseName": "Dasar Pemrograman",
+                "redirectTo": ""
+            },
+            {
+                "courseName": "Bahasa Indonesia Dasar",
+                "redirectTo": ""
+            }
+        ],
+        "navigations":  [
+            {
+                "navItem": "Pelajaran",
+                "redirectTo": ""
+            },
+            {
+                "navItem": "Forum",
+                "redirectTo": ""
+            },
+            {
+                "navItem": "Kelas",
+                "redirectTo": ""
+            },
+            {
+                "navItem": "Enrollment",
+                "redirectTo": ""
+            },
+            {
+                "navItem": "Reviews",
+                "redirectTo": ""
+            }
+        ],
+        "copyright": "2024 LearnWithLC, All Right Reserved.",
+        "contacts": {
+            "facebook":  "https://facebook.com",
+            "whatsapp": "https:wa.me/+6289xxxxxxxxx",
+            "instagram": "https://instagram.com",
+            "email": "learnwithlc.now@gmail.com",
+            "phoneNumber": "+62 874 949 834 34"
+        }
+    }
+}

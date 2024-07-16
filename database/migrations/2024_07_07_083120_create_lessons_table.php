@@ -15,7 +15,9 @@ return new class extends Migration
             $table->string('id', 32)->primary();
             $table->string('name', 100);
             $table->text('description');
+            $table->integer('targeted_class');
             $table->integer('amount_chapter');
+            $table->integer('amount_registered_user');
             $table->timestamps();
         });
     }

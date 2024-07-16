@@ -16,6 +16,7 @@ return new class extends Migration
             $table->uuid('user_id')->index();
             $table->uuid('lesson_id')->index();
             $table->text('comment');
+            $table->double('rate');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')

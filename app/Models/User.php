@@ -40,6 +40,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'id',
+        'level_id',
         'username',
         'firstname',
         'lastname',
@@ -47,6 +49,7 @@ class User extends Authenticatable
         'email_verified_at',
         'phone_number',
         'password',
+        'photo'
     ];
 
     /**
@@ -70,16 +73,16 @@ class User extends Authenticatable
 
     public function posts(): HasMany
     {
-        return $this->hasMany(Post::class, 'user_id', 'id');
+        return $this->hasMany(Post::class, 'id', 'user_id');
     }
 
     public function post_comments(): HasMany
     {
-        return $this->hasMany(PostComment::class, 'user_id', 'id');
+        return $this->hasMany(PostComment::class, 'id', 'user_id');
     }
 
     public function post_comment_replies(): HasMany
     {
-        return $this->hasMany(PostCommentReply::class, 'user_id', 'id');
+        return $this->hasMany(PostCommentReply::class, 'id', 'user_id');
     }
 }

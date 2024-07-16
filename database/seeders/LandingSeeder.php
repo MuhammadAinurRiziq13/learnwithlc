@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Company;
+use App\Models\CompanyTestimony;
 use App\Models\Facility;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -14,7 +16,7 @@ class LandingSeeder extends Seeder
     {
         // Company description
         Company::create([
-            'about' => 'Bimbingan dan Dukungan untuk Mewujudkan Impian Akademis dan Karier.',
+            'about' => 'Bimbingan dan Dukungan untuk Mewujudkan <span class="text-primary">Impian</span> Akademis dan Karier.',
             'description' => 'Mendukung Setiap Impian dengan Pembelajaran yang Berkualitas.'
         ]);
 
@@ -39,5 +41,10 @@ class LandingSeeder extends Seeder
             'icon' => 'fa fa-whiteboard',
             'created_at' => now()
         ]);
+
+        User::whereHas('level', fn($query) => $query->where('name', 'Publik'))
+            ->limit(5)->get()->each(fn($user) => CompanyTestimony::factory()->create([
+                'user_id' => $user->id
+            ]));
     }
 }
