@@ -5,7 +5,7 @@ import { Link } from "@inertiajs/react";
 
 export default function Footer({ content }: FooterProps) {
     return (
-        <footer className="flex flex-col py-5 mt-24">
+        <footer className="flex flex-col py-5 w-[85vw] mx-auto mt-24">
             <div className="flex flex-col lg:flex-row font-default">
                 {/* Insight Company */}
                 <div className="flex flex-col mb-5 lg:w-1/2">

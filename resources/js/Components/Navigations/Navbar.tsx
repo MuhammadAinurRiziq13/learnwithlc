@@ -21,58 +21,58 @@ export default function Navbar({ user }: { user: User }) {
                                 <ApplicationLogo />
                             </Link>
                         </div>
-
-                        <div className="hidden space-x-8 lg:-my-px lg:ms-10 lg:flex">
-                            <NavLink
-                                href={route("landing.page")}
-                                active={route().current("landing.page")}
-                            >
-                                Home
-                            </NavLink>
-                            <NavLink
-                                href={route("courses")}
-                                active={route().current("courses")}
-                            >
-                                Courses
-                            </NavLink>
-                            <NavLink
-                                href={route("dashboard")}
-                                active={route().current("dashboard")}
-                            >
-                                Forum
-                            </NavLink>
-
-                            <div className="flex flex-col justify-center items-center">
-                                <a
-                                    href={route("dashboard")}
-                                    className="bg-primary text-white text-sm px-4 py-1 rounded-xl"
-                                >
-                                    Try Now
-                                </a>
-                            </div>
-                        </div>
                     </div>
 
                     <div className="hidden lg:flex lg:items-center lg:ms-6">
-                        <div className="flex items-center max-w-lg mx-auto">
-                            <label htmlFor="voice-search" className="sr-only">
-                                Search
-                            </label>
-                            <div className="relative w-full">
-                                <input
-                                    type="text"
-                                    id="voice-search"
-                                    className="bg-gray-primary border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pe-10 py-3"
-                                    placeholder="Search for Courses"
-                                    required
-                                />
-                                <button
-                                    type="button"
-                                    className="absolute inset-y-0 end-0 flex items-center pe-3"
-                                >
-                                    <FaSearch />
-                                </button>
-                            </div>
+                        <div className="hidden space-x-8 lg:-my-px lg:ms-10 lg:flex mx-3">
+                            <NavLink
+                                href="#tentangKami"
+                                // active={route().current("landing.page")}
+                            >
+                                Tentang Kami
+                            </NavLink>
+                            <NavLink
+                                href="#keunggulan"
+                                // active={route().current("landing.page")}
+                            >
+                                Keunggulan
+                            </NavLink>
+                            <NavLink
+                                href="#program"
+                                // active={route().current("landing.page")}
+                            >
+                                Program
+                            </NavLink>
+                            <NavLink
+                                href="#fasilitas"
+                                // active={route().current("landing.page")}
+                            >
+                                Fasilitas
+                            </NavLink>
+                            <NavLink
+                                href="#aktifitas"
+                                // active={route().current("landing.page")}
+                            >
+                                Aktifitas
+                            </NavLink>
+                            <NavLink
+                                href="#pengajar"
+                                // active={route().current("landing.page")}
+                            >
+                                Pengajar
+                            </NavLink>
+                            <NavLink
+                                href="#testimoni"
+                                // active={route().current("landing.page")}
+                            >
+                                Testimoni
+                            </NavLink>
+                            <NavLink
+                                href="#faq"
+                                // active={route().current("landing.page")}
+                            >
+                                FAQ
+                            </NavLink>
                         </div>
                         <div className="ms-3 relative">
                             {user ? (
@@ -182,12 +182,60 @@ export default function Navbar({ user }: { user: User }) {
                 }
             >
                 <div className="pt-2 pb-0 space-y-1">
-                    <ResponsiveNavLink
+                    {/* <ResponsiveNavLink
                         href={route("dashboard")}
                         active={route().current("dashboard")}
                     >
-                        Home
-                    </ResponsiveNavLink>
+                        Tentang Kami
+                    </ResponsiveNavLink> */}
+                    <ResponsiveNavLink
+                                href="#tentangKami"
+                                // active={route().current("landing.page")}
+                            >
+                                Tentang Kami
+                            </ResponsiveNavLink>
+                            <ResponsiveNavLink
+                                href="#keunggulan"
+                                // active={route().current("landing.page")}
+                            >
+                                Keunggulan
+                            </ResponsiveNavLink>
+                            <ResponsiveNavLink
+                                href="#program"
+                                // active={route().current("landing.page")}
+                            >
+                                Program
+                            </ResponsiveNavLink>
+                            <ResponsiveNavLink
+                                href="#fasilitas"
+                                // active={route().current("landing.page")}
+                            >
+                                Fasilitas
+                            </ResponsiveNavLink>
+                            <ResponsiveNavLink
+                                href="#aktifitas"
+                                // active={route().current("landing.page")}
+                            >
+                                Aktifitas
+                            </ResponsiveNavLink>
+                            <ResponsiveNavLink
+                                href="#pengajar"
+                                // active={route().current("landing.page")}
+                            >
+                                Pengajar
+                            </ResponsiveNavLink>
+                            <ResponsiveNavLink
+                                href="#testimoni"
+                                // active={route().current("landing.page")}
+                            >
+                                Testimoni
+                            </ResponsiveNavLink>
+                            <ResponsiveNavLink
+                                href="#faq"
+                                // active={route().current("landing.page")}
+                            >
+                                FAQ
+                            </ResponsiveNavLink>
                 </div>
 
                 {user ? (

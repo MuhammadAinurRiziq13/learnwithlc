@@ -19,9 +19,9 @@ export default function CourseCard({ lesson }: { lesson: LessonProps }) {
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {lesson.name}
             </h5>
-            <Link href="" className="w-[80px] h-[80px] bg-gray-900 absolute right-16 top-52 rounded-full text-gray-500 hover:text-white flex justify-center items-center text-3xl border-4 border-white">
-                <FaPlay />
-            </Link>
+                {/* <Link href="" className="w-[80px] h-[80px] bg-gray-900 absolute right-16 top-52 rounded-full text-gray-500 hover:text-white flex justify-center items-center text-3xl border-4 border-white">
+                    <FaPlay />
+                </Link> */}
             <p className="font-normal text-gray-700 dark:text-gray-400"></p>
             <div className="flex flex-col">
                 <div className="flex justify-between items-center">
