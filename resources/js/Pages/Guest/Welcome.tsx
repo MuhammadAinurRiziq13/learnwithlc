@@ -87,7 +87,7 @@ export default function Welcome({
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-12">
                         <LandingCard
                             tag="Belajar"
-                            content="Nikmati kemudahan belajar yang interaktif dan terstruktur"
+                            content="Nikmati kemudahan belajar yang interaktif dan terstruktur."
                             redirectTo=""
                             className="bg-light-salmon"
                             icon={<FaBookReader />}
